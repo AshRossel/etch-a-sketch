@@ -25,3 +25,20 @@ function startDrawing() {
         })
     })
 }
+
+function chooseGridSize() {
+    const btn = document.querySelector('.gridsize-button');
+    btn.addEventListener('click', function() {
+        let gridSize;
+        do 
+        {
+            gridSize = Number(prompt('Choose a number up to 100'));
+        }
+        while(gridSize > 100);
+
+        createGrid(gridSize);
+        startDrawing();
+    })
+}
+
+chooseGridSize();
