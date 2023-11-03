@@ -15,3 +15,13 @@ function createGrid(gridSize) {
       container.appendChild(square);
     }
 }
+
+function startDrawing() {
+    const container = document.querySelector('.container');
+    const squares = container.querySelectorAll('div');
+    squares.forEach((square) => {
+        square.addEventListener('mouseover', function() {
+            square.style.backgroundColor = 'black';
+        })
+    })
+}
